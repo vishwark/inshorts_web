@@ -44,14 +44,14 @@ export default function Settings(){
     return <>
         <div>
             <div className="relative shadow sticky top-0 bg-white mb-4 flex justify-center py-2 px-2">
-                <img onClick={()=>{router.back()}} src="/left-arrow.svg" className="h-6 w-6 absolute left-2 top-1/2 transform -translate-y-1/2 fill-blue-500"/>
+                <img onClick={()=>{router.back()}} src="/left-arrow.svg" alt="left_arrow" className="h-6 w-6 absolute left-2 top-1/2 transform -translate-y-1/2 fill-blue-500"/>
                 <div className="pl-2 self-center">Options</div>
             </div>
 
             <div className="px-4 shadow">
                 <div className="flex justify-between py-5">
                     <div className="flex">
-                        <img src="/Aa.svg" className="h-6 w-6 mr-[18px]"/>
+                        <img src="/Aa.svg" alt="Aa" className="h-6 w-6 mr-[18px]"/>
                         <p>Language</p>
                     </div>
                     <p className="flex ">
@@ -66,7 +66,7 @@ export default function Settings(){
                 
                 <div className="flex justify-between py-5">
                     <div className="flex">
-                        <img src="/bell.svg" className="h-6 w-6 mr-[18px]"/>
+                        <img src="/bell.svg" alt="bell_ic" className="h-6 w-6 mr-[18px]"/>
                         <p>Notifications</p>
                     </div>
                     <p>

@@ -25,10 +25,10 @@ export default function DiscoverPage(){
       <div className="shadow sticky top-0 bg-white mb-4 flex justify-between py-2 px-2 w-full">
         <div className="pl-2">Categories and Topics</div>
         <div className="flex">
-            <img src="/settings.svg" className="pr-2 h-6 w-6" onClick={()=>{
+            <img src="/settings.svg" alt="settings_ic" className="pr-2 h-6 w-6" onClick={()=>{
                 router.push('/settings')
             }} />
-            <img onClick={()=>{ router.back()}} src="/right-arrow.svg" className="h-6 w-6"/>
+            <img onClick={()=>{ router.back()}} alt="right_arrow" src="/right-arrow.svg" className="h-6 w-6"/>
         </div>
       </div>
       <CategoryList/>

@@ -13,8 +13,8 @@ export default function SuggestedTopicGroup({ topics }) {
     }
 
     let tileGrp = topics.map((element, index) => (
-        <div onClick={()=>{clickTileClick(element)}}>
-            <SuggestedTopicTile className="h-[20vh] shadow rounded " key={index} tileData={element}/>
+        <div onClick={()=>{clickTileClick(element)}} key={index}>
+            <SuggestedTopicTile className="h-[20vh] shadow rounded " tileData={element}/>
         </div>
     ));
     return <>
