@@ -2,6 +2,7 @@
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { fetchNewsByCategory, fetchNewsByTopic } from '@/services/news'
+import Hamburger from "@/components/hamburger";
 
 export default function Read({ params }) {
   const router = useRouter()
@@ -123,10 +124,16 @@ export default function Read({ params }) {
 
   return (
     <>
+      <nav className="hidden md:flex item-center px-3 py-3 justify-center content-center bg-white sticky top-0 shadow-lg">
+          <Hamburger/>
+          <div>
+              <img src="https://assets.inshorts.com/website_assets/images/logo_inshorts.png" className="h-13 w-32"/>
+          </div>
+      </nav>
       <div className="flex flex-col items-center">
         {/* Below header shown on larger devices only */}
-        <div className="hidden md:flex md:w-5/6 my-4">
-          <div className="bg-[#f44336] md:px-8 xs:px-2 py-2 flex xs:flex-col lg:flex-row justify-between items-center text-center">
+        <div className="hidden md:flex my-4 lg:w-[1080px]">
+          <div className="bg-[#f44336] w-full md:px-8 xs:px-2 py-2 flex xs:flex-col lg:flex-row justify-between items-center text-center">
             <p>For the best experience use <a href="https://inshorts.com/mobile"><b>inshorts</b></a> app on your smartphone</p>
             <div className="flex">
               <img className="h-13 w-36" src="https://assets.inshorts.com/website_assets/images/appstore.png"/>

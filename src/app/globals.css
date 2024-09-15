@@ -42,3 +42,27 @@ body {
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
 }
+
+@keyframes push-right {
+  0%{
+    left:-250px;
+  }
+  100% {
+    left: 0;
+  }
+}
+@keyframes push-left {
+  0%{
+    left:0;
+  }
+  100% {
+    left: -250px;
+  }
+}
+
+.push-right{
+  animation: push-right 1s forwards;
+}
+.push-left{
+  animation: push-left 1s forwards;
+}

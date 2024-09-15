@@ -5,12 +5,6 @@ export default function NewsReadLayout({
       
       <section className="bg-white">
         {/* Include shared UI here e.g. a header or sidebar */}
-        <nav className="hidden md:flex item-center px-3 py-3 justify-center content-center bg-white sticky top-0 shadow-lg">
-            <div>
-                <img src="https://assets.inshorts.com/website_assets/images/logo_inshorts.png" className="h-13 w-32"/>
-            </div>
-        </nav>
-   
         {children}
         <div className="hidden md:flex bg-[#323232] py-5 justify-around md:flex-row xs:flex-col">
             <div className="flex items-center">
