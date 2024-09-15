@@ -34,14 +34,14 @@ export default function Hamburger(){
       };
 
     let topicList  = topics.map((topic)=>{
-        return <div className="px-7 divide-y divide-blue-200 py-1 text-white hover:bg-black hover:bg-opacity-25 hover:scale-110 cursor-pointer">
+        return <div className="px-7 divide-y divide-blue-200 py-1 text-white hover:bg-black hover:bg-opacity-25 hover:scale-110 cursor-pointer" key={topic.label}>
             {topic.label}
         </div>
     })
 
     let menu = <div id="menubar" className={`${showMenu ? 'push-right' : ''} h-full bg-[#303036] fixed left-[-250px] top-0`} style={{transition: "5s",zIndex:"1"}}>
                     <div className="ml-4 absolute right-[-48px] cursor-pointer text-black" onClick={()=>{handleMenuBar(!showMenu)}}>
-                        <img src="/cross.svg" className="mt-4 h-8 w-8"/>
+                        <img src="/cross.svg" alt="cancel" className="mt-4 h-8 w-8"/>
                     </div>
                     <div className="h-full flex flex-col justify-evenly">
                         <div className="flex border mx-4">
@@ -54,7 +54,7 @@ export default function Hamburger(){
                 </div>
 
     let menuButton = <div className={`absolute left-2 flex items-center cursor-pointer`}>
-            <img src="/hamburger.svg" className="h-8 w-8" onClick={()=>{handleMenuBar(!showMenu)}}/>
+            <img src="/hamburger.svg" alt="hamburger" className="h-8 w-8" onClick={()=>{handleMenuBar(!showMenu)}}/>
             <span className="px-2">Menu</span>
         </div>
 
